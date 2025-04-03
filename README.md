@@ -25,7 +25,7 @@ docker run -p 5006:5000 compare:latest
 
 The compare service accepts as input a JSON dictionary mapping the strings "embdding_set_1" and "embedding_set_2" to  dictionaries that in turn  map ids to embeddings. The compare service compares each embedding in embedding_set_1 to every embedding in embedding_set_2 and returns the results in the form of a list of lists [[[x, y], z], [[x, y], z]] where x and y both correspond to embedding ids and z is the calculated cosine similarity of the referenced embeddings. The outer list is sorted from highest to lowest similarity score.
 
-Example request payload:
+Example request   payload:
 Note that embeddings have been abridged for easy human readability.
 ```
 {     
