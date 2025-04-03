@@ -94,10 +94,10 @@ To use the compare service, you'll need to send a POST request to the `/compare`
 ## Testing
 Testing is done with pytest within the Docker container. To run tests, build the test Docker image and execute the test suite:
 
-\```bash
+```bash
 docker build --target test -t compare:test .
 docker run --rm compare:test pytest
-\```
+```
 
 The tests for this service make use of the sample data in tests/sample_data/embeddings_data.json. 
 
