@@ -1,0 +1,19 @@
+name: Run Pytest
+
+on:
+  pull_request:
+    branches: [ main ]
+    types: [opened, synchronize]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Build and run tests
+      run: |
+        docker build --target test -t compare:test .
+        docker run --rm compare:test pytest 
