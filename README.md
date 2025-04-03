@@ -12,14 +12,14 @@ The `compare` service performs semantic comparisons between sets of text embeddi
 If you want to build and run the compare service as a standalone service, you can simply build it with docker here. Note that you'll also need either a running instance of the embeddings service or some pre-generated embeddings to compare.
 
 #### Building the image: 
-\```bash
+```bash
 docker build -t compare:latest .
-\```
+```
 
 #### Running the container:
-\```bash
+```bash
 docker run -p 5006:5000 compare:latest
-\```
+```
 
 ## Usage
 
@@ -27,7 +27,7 @@ The compare service accepts as input a JSON dictionary mapping the strings "embd
 
 Example request payload:
 Note that embeddings have been abridged for easy human readability.
-
+```
 {     
   "embedding_set_1": {
     "b1": [
@@ -54,7 +54,7 @@ Note that embeddings have been abridged for easy human readability.
     ] 
   }   
 }
-
+```
 Example return:
 ```json
 [
