@@ -101,3 +101,5 @@ docker run --rm compare:test pytest
 
 The tests for this service make use of the sample data in tests/sample_data/embeddings_data.json. 
 
+
+
